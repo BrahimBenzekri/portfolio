@@ -70,7 +70,7 @@ export const meta = {
   phone: "+213 66 85 87 623",
   location: "Béjaia, Algeria",
   github: "https://github.com/BrahimBenzekri",
-  linkedin: "https://www.linkedin.com/in/brahim-benzekri-07b1b527b/", // ← update this
+  linkedin: "https://www.linkedin.com/in/brahim-benzekri-609486232", // ← update this
   cvUrl: "/cv/Brahim_Benzekri_CV.pdf",
   avatar: "/images/avatar.jpg",
 }
