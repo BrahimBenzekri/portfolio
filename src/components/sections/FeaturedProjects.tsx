@@ -15,6 +15,7 @@ export function FeaturedProjects() {
       <div className="content-width">
         <div className="flex items-end justify-between mb-12">
           <SectionHeader
+            label="// work"
             title="Featured Projects"
             subtitle="A selection of things I've built"
           />
@@ -36,7 +37,7 @@ export function FeaturedProjects() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
             >
-              <ProjectCard project={project} />
+              <ProjectCard project={project} index={index} />
             </motion.div>
           ))}
         </div>

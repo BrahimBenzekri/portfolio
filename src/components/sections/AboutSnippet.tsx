@@ -59,10 +59,6 @@ export function AboutSnippet() {
                 fill
                 className="object-cover"
               />
-              {/* Fallback initials if no avatar */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-5xl font-bold text-border">BB</span>
-              </div>
             </div>
           </motion.div>
         </div>

@@ -90,7 +90,8 @@ Before building any section, browse these for layout and aesthetic inspiration:
 - https://www.adeolaadeoti.site/ + https://github.com/adeolaadeoti/adeolaadeoti-v2
 - https://iamschulz.com/ + https://github.com/iamschulz/iamschulz-hugo
 - https://www.seyi.dev/ + https://github.com/oluwadareseyi/folio-v2
-
+- https://azizstark.com/ + https://github.com/AzizStark/AzizStark/tree/portfolio-v2
+- https://hamishw.com/ + https://github.com/HamishMW/portfolio
 
 Focus on:
 - How they structure section spacing and whitespace

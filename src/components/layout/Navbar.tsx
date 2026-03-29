@@ -26,7 +26,6 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileOpen(false)
   }, [pathname])
@@ -36,7 +35,7 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "backdrop-blur-md bg-bg-primary/80 border-b border-border"
+          ? "backdrop-blur-md bg-bg-primary/90 border-b border-border"
           : "bg-transparent"
       )}
     >
@@ -44,7 +43,7 @@ export function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-xl font-bold text-accent hover:text-accent-hover transition-colors duration-200"
+          className="text-xl font-black tracking-tight text-accent hover:text-accent-hover transition-colors duration-200"
         >
           BB
         </Link>
@@ -56,12 +55,15 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               className={cn(
-                "text-sm transition-colors duration-200 relative",
+                "text-sm transition-colors duration-200 relative flex items-center gap-1.5",
                 pathname === link.href
                   ? "text-text-primary"
                   : "text-text-secondary hover:text-text-primary"
               )}
             >
+              {pathname === link.href && (
+                <span className="text-accent text-base leading-none">·</span>
+              )}
               {link.label}
               {pathname === link.href && (
                 <motion.div
@@ -78,7 +80,7 @@ export function Navbar() {
           <a
             href={meta.cvUrl}
             download
-            className="inline-flex items-center gap-2 border border-border hover:border-border-hover text-text-secondary hover:text-text-primary text-sm px-4 py-2 rounded-lg transition-all duration-200"
+            className="inline-flex items-center gap-2 border border-border hover:border-accent/50 text-text-secondary hover:text-accent text-sm px-4 py-2 rounded-lg transition-all duration-200"
           >
             <Download size={14} />
             Download CV
@@ -103,26 +105,27 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden bg-bg-secondary border-b border-border px-6 py-6 space-y-4"
+            className="md:hidden bg-bg-secondary/95 backdrop-blur-md border-b border-border px-6 py-6 space-y-4"
           >
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "block text-base transition-colors duration-200",
+                  "flex items-center gap-2 text-base transition-colors duration-200",
                   pathname === link.href
                     ? "text-accent font-medium"
                     : "text-text-secondary hover:text-text-primary"
                 )}
               >
+                {pathname === link.href && <span className="text-accent">·</span>}
                 {link.label}
               </Link>
             ))}
             <a
               href={meta.cvUrl}
               download
-              className="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-text-primary transition-colors duration-200 pt-2"
+              className="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-accent transition-colors duration-200 pt-2"
             >
               <Download size={14} />
               Download CV
