@@ -87,7 +87,10 @@ No component changes needed. Ever.
 
 Before building any section, browse these for layout and aesthetic inspiration:
 - https://brittanychiang.com + https://github.com/bchiang7/v4
-- https://leerob.io + https://github.com/leerob/leerob.io
+- https://www.adeolaadeoti.site/ + https://github.com/adeolaadeoti/adeolaadeoti-v2
+- https://iamschulz.com/ + https://github.com/iamschulz/iamschulz-hugo
+- https://www.seyi.dev/ + https://github.com/oluwadareseyi/folio-v2
+
 
 Focus on:
 - How they structure section spacing and whitespace

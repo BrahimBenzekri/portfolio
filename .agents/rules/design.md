@@ -11,23 +11,27 @@ Read this before building any UI component.
 ## 🎨 Color Palette
 
 ```css
-/* Background layers */
---bg-primary:    #0a0a0a   /* Main background */
---bg-secondary:  #111111   /* Cards, sections */
---bg-tertiary:   #1a1a1a   /* Hover states, inputs */
+/* Background layers — lifted from pure black, has depth now */
+--bg-primary:    #0d1117   /* Deep navy-dark, not pure black */
+--bg-secondary:  #161d27   /* Cards — slightly blue-tinted dark */
+--bg-tertiary:   #1e2733   /* Hover states, inputs — visible contrast */
 
-/* Text */
---text-primary:  #f5f5f5   /* Headings, primary content */
---text-secondary:#a3a3a3   /* Subtitles, descriptions */
---text-muted:    #525252   /* Timestamps, minor labels */
+/* Text — warmer and more readable */
+--text-primary:  #e8edf3   /* Soft white, not harsh */
+--text-secondary:#8fa3b8   /* Blue-tinted gray — fits the teal vibe */
+--text-muted:    #4a6070   /* Visible but subtle */
 
-/* Accent (use sparingly) */
---accent:        #3B82F6   /* CTAs, links, highlights, tags */
---accent-hover:  #2563EB
+/* Accent — light teal, your vibe */
+--accent:        #2dd4bf   /* Teal 400 — alive and fresh */
+--accent-hover:  #14b8a6   /* Teal 500 — slightly deeper on hover */
+--accent-subtle: #2dd4bf18 /* Teal at 10% opacity — for tag backgrounds */
 
-/* Borders */
---border:        #262626   /* Subtle dividers */
---border-hover:  #404040
+/* Borders — tinted slightly teal so they breathe */
+--border:        #1e3040   /* Deep teal-blue border */
+--border-hover:  #2a4a60   /* Visible on hover */
+
+/* Bonus — glow effect for cards/CTAs */
+--glow:          0 0 24px rgba(45, 212, 191, 0.08)
 ```
 
 In Tailwind, map these as custom colors in `tailwind.config.ts`.

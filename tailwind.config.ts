@@ -10,23 +10,27 @@ const config: Config = {
     extend: {
       colors: {
         bg: {
-          primary: "#0a0a0a",
-          secondary: "#111111",
-          tertiary: "#1a1a1a",
+          primary: "var(--bg-primary)",
+          secondary: "var(--bg-secondary)",
+          tertiary: "var(--bg-tertiary)",
         },
         text: {
-          primary: "#f5f5f5",
-          secondary: "#a3a3a3",
-          muted: "#525252",
+          primary: "var(--text-primary)",
+          secondary: "var(--text-secondary)",
+          muted: "var(--text-muted)",
         },
         accent: {
-          DEFAULT: "#3B82F6",
-          hover: "#2563EB",
+          DEFAULT: "var(--accent)",
+          hover: "var(--accent-hover)",
+          subtle: "var(--accent-subtle)",
         },
         border: {
-          DEFAULT: "#262626",
-          hover: "#404040",
+          DEFAULT: "var(--border)",
+          hover: "var(--border-hover)",
         },
+      },
+      boxShadow: {
+        glow: "var(--glow)",
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)"],
