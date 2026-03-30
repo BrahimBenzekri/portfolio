@@ -33,7 +33,7 @@ const config: Config = {
         glow: "var(--glow)",
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)"],
+        sans: ["var(--font-hanken-grotesk)"],
         mono: ["var(--font-geist-mono)"],
       },
       maxWidth: {
