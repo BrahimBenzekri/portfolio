@@ -263,11 +263,14 @@ export const skills: Skill[] = [
   { name: "Riverpod", category: "State Management", level: "Intermediate" },
   { name: "Provider", category: "State Management", level: "Intermediate" },
   { name: "Supabase", category: "Backend", level: "Intermediate" },
+  { name: "Firebase", category: "Backend", level: "Intermediate" },
   { name: "Git", category: "Tool", level: "Advanced" },
   { name: "REST APIs", category: "Tool", level: "Intermediate" },
+  { name: "Docker", category: "Tool", level: "Intermediate" },
   { name: "UI/UX Design", category: "Other", level: "Intermediate" },
   { name: "Cybersecurity", category: "Other", level: "Beginner" },
-  { name: "Arch Linux", category: "OS", level: "Intermediate" },
+  { name: "Bash scripting", category: "Other", level: "Intermediate" },
+  { name: "Arch Linux", category: "OS", level: "Advanced" },
 ]
 
 // ── EDUCATION ────────────────────────────────────────────────
@@ -277,7 +280,7 @@ export const education: Education = {
   school: "ESTIN",
   location: "Béjaia, Algeria",
   year: "2nd Year",
-  graduation: "Expected 2027",
+  graduation: "Expected 2028",
   coursework: ["Programming", "Data Structures", "Mobile Development"],
 }
 
