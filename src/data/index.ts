@@ -31,7 +31,6 @@ export type Project = {
 export type Skill = {
   name: string
   category: "Language" | "Framework" | "State Management" | "Backend" | "Tool" | "Other" | "OS"
-  level: "Advanced" | "Intermediate" | "Beginner"
   icon?: string
 }
 
@@ -255,22 +254,22 @@ export const projects: Project[] = [
 // ── SKILLS ───────────────────────────────────────────────────
 
 export const skills: Skill[] = [
-  { name: "Dart", category: "Language", level: "Advanced" },
-  { name: "Python", category: "Language", level: "Intermediate" },
-  { name: "C", category: "Language", level: "Intermediate" },
-  { name: "Flutter", category: "Framework", level: "Intermediate" },
-  { name: "GetX", category: "State Management", level: "Intermediate" },
-  { name: "Riverpod", category: "State Management", level: "Intermediate" },
-  { name: "Provider", category: "State Management", level: "Intermediate" },
-  { name: "Supabase", category: "Backend", level: "Intermediate" },
-  { name: "Firebase", category: "Backend", level: "Intermediate" },
-  { name: "Git", category: "Tool", level: "Advanced" },
-  { name: "REST APIs", category: "Tool", level: "Intermediate" },
-  { name: "Docker", category: "Tool", level: "Intermediate" },
-  { name: "UI/UX Design", category: "Other", level: "Intermediate" },
-  { name: "Cybersecurity", category: "Other", level: "Beginner" },
-  { name: "Bash scripting", category: "Other", level: "Intermediate" },
-  { name: "Arch Linux", category: "OS", level: "Advanced" },
+  { name: "Dart", category: "Language" },
+  { name: "Python", category: "Language" },
+  { name: "C", category: "Language" },
+  { name: "Flutter", category: "Framework" },
+  { name: "GetX", category: "State Management" },
+  { name: "Riverpod", category: "State Management" },
+  { name: "Provider", category: "State Management" },
+  { name: "Supabase", category: "Backend" },
+  { name: "Firebase", category: "Backend" },
+  { name: "Git", category: "Tool" },
+  { name: "REST APIs", category: "Tool" },
+  { name: "Docker", category: "Tool" },
+  { name: "UI/UX Design", category: "Other" },
+  { name: "Cybersecurity", category: "Other" },
+  { name: "Bash scripting", category: "Other" },
+  { name: "Arch Linux", category: "OS" },
 ]
 
 // ── EDUCATION ────────────────────────────────────────────────
@@ -326,9 +325,9 @@ export const testimonials: Testimonial[] = [
 // ── LANGUAGES ────────────────────────────────────────────────
 
 export const languages = [
-  { name: "Arabic", level: "Native" },
-  { name: "English", level: "Fluent" },
-  { name: "French", level: "Intermediate" },
+  { name: "Arabic" },
+  { name: "English" },
+  { name: "French" },
 ]
 
 // ── HELPERS ──────────────────────────────────────────────────

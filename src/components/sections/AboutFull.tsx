@@ -165,9 +165,8 @@ export function AboutFull() {
         <h2 className="text-2xl font-bold text-text-primary">Languages</h2>
         <div className="flex flex-wrap gap-4">
           {languages.map((l) => (
-            <div key={l.name} className="bg-bg-secondary border border-border rounded-xl px-6 py-4 text-center">
+            <div key={l.name} className="bg-bg-secondary border border-border rounded-xl px-8 py-5 text-center">
               <p className="text-text-primary font-semibold">{l.name}</p>
-              <p className="text-accent text-xs mt-0.5 font-mono">{l.level}</p>
             </div>
           ))}
         </div>

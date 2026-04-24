@@ -14,12 +14,6 @@ const categoryOrder = [
   "Other",
 ]
 
-const levelDots: Record<string, number> = {
-  Advanced: 3,
-  Intermediate: 2,
-  Beginner: 1,
-}
-
 export function SkillsSection() {
   const grouped = categoryOrder.reduce(
     (acc, cat) => {
@@ -57,18 +51,6 @@ export function SkillsSection() {
                 {catSkills.map((skill) => (
                   <div key={skill.name} className="flex items-center justify-between">
                     <span className="text-sm text-text-secondary">{skill.name}</span>
-                    <div className="flex gap-1.5">
-                      {[1, 2, 3].map((dot) => (
-                        <div
-                          key={dot}
-                          className={`w-1.5 h-1.5 rounded-full transition-colors duration-200 ${
-                            dot <= levelDots[skill.level]
-                              ? "bg-accent"
-                              : "bg-border"
-                          }`}
-                        />
-                      ))}
-                    </div>
                   </div>
                 ))}
               </div>
