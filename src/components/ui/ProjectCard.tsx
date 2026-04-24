@@ -42,9 +42,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       {/* Editorial number */}
       {num && (
         <span
-          className={`absolute top-4 right-4 text-3xl font-black font-mono select-none z-10 transition-colors duration-200 ${!showPlaceholder
-              ? "text-black/80 group-hover:text-black"
-              : "text-white/20 group-hover:text-accent/40"
+          className={`absolute top-4 left-4 text-3xl font-black font-mono select-none z-10 transition-colors duration-200 ${!showPlaceholder
+            ? "text-black/80 group-hover:text-black"
+            : "text-white/20 group-hover:text-accent/40"
             }`}
         >
           {num}
