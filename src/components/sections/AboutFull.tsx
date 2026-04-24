@@ -3,7 +3,8 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Download, Trophy, GraduationCap } from "lucide-react"
-import { meta, skills, education, hackathons, languages } from "@/data"
+import { meta, skills, education, experiences, hackathons, languages } from "@/data"
+import { ExperienceSection } from "./ExperienceSection"
 
 const categoryOrder = [
   "Language",
@@ -86,6 +87,9 @@ export function AboutFull() {
           </div>
         </div>
       </motion.div>
+
+      {/* Professional Experience */}
+      <ExperienceSection />
 
       {/* Hackathons */}
       <motion.div

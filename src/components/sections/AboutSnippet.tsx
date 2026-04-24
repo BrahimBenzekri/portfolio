@@ -31,9 +31,9 @@ export function AboutSnippet() {
               {education.location}, specializing in Flutter mobile development.
             </p>
             <p className="text-text-secondary leading-relaxed">
-              I&apos;ve shipped apps across two national hackathons and I&apos;m always building
+              I&apos;ve shipped apps across two national hackathons, gained hands-on professional experience as a
+              Network & Security Systems Technician, and I&apos;m always building
               something on the side — from AI-powered tools to full-stack mobile platforms.
-              I care about clean code, good UX, and solving real problems.
             </p>
             <Link
               href="/about"

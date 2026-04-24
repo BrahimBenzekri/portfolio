@@ -58,6 +58,14 @@ export type Education = {
   coursework: string[]
 }
 
+export type Experience = {
+  title: string
+  company: string
+  location: string
+  period: string
+  description: string[]
+}
+
 // ── META ─────────────────────────────────────────────────────
 
 export const meta = {
@@ -282,6 +290,25 @@ export const education: Education = {
   graduation: "Expected 2028",
   coursework: ["Programming", "Data Structures", "Mobile Development"],
 }
+
+// ── EXPERIENCE ───────────────────────────────────────────────
+
+export const experiences: Experience[] = [
+  {
+    title: "Network & Security Systems Technician",
+    company: "YOTTA — Algeria",
+    location: "Algeria",
+    period: "June 2024 – April 2026 (part-time)",
+    description: [
+      "Installed and configured CCTV systems (IP & analog), including cameras, NVRs, and monitoring setups",
+      "Deployed structured cabling systems (Ethernet, coaxial, and fiber optics) across residential and commercial buildings",
+      "Performed fiber optic fusion splicing and signal testing to ensure stable connectivity",
+      "Installed and organized network racks (armoires), switches, and patch panels",
+      "Routed and secured cabling through walls, ceilings, and infrastructure using professional tools",
+      "Diagnosed and resolved network and security system issues on-site",
+    ],
+  },
+]
 
 // ── HACKATHONS ───────────────────────────────────────────────
 
