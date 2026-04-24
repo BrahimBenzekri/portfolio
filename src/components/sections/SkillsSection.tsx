@@ -32,7 +32,7 @@ export function SkillsSection() {
           title="Technical Skills"
           subtitle="Technologies and tools I work with"
         />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
           {Object.entries(grouped).map(([category, catSkills], groupIndex) => (
             <motion.div
               key={category}
@@ -41,7 +41,7 @@ export function SkillsSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: groupIndex * 0.08, ease: "easeOut" }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="bg-bg-secondary border border-border hover:border-border-hover rounded-xl p-6 space-y-4 transition-colors duration-200"
+              className="bg-bg-secondary border border-border hover:border-border-hover rounded-xl p-4 space-y-3 transition-colors duration-200"
               style={{ boxShadow: "var(--glow)" }}
             >
               <p className="text-xs font-mono font-semibold uppercase tracking-[0.15em] text-accent">
