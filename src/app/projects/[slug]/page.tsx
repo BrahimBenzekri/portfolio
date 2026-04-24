@@ -6,7 +6,7 @@ import { ProjectDetail } from "@/components/sections/ProjectDetail"
 import { projects, getProjectBySlug } from "@/data"
 
 type Props = {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 // Pre-generate all project detail pages at build time
@@ -17,7 +17,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const project = getProjectBySlug(params.slug)
+  const { slug } = await params
+  const project = getProjectBySlug(slug)
   if (!project) return {}
   return {
     title: project.title,
@@ -25,8 +26,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function ProjectDetailPage({ params }: Props) {
-  const project = getProjectBySlug(params.slug)
+export default async function ProjectDetailPage({ params }: Props) {
+  const { slug } = await params
+  const project = getProjectBySlug(slug)
   if (!project) notFound()
 
   return (
