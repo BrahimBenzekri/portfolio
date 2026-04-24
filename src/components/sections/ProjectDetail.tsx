@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -21,6 +22,9 @@ function SectionLabel({ num, title }: { num: string; title: string }) {
 }
 
 export function ProjectDetail({ project }: { project: Project }) {
+  const [imgError, setImgError] = useState(false)
+  const showPlaceholder = !project.thumbnail || imgError
+
   const { prev, next } = getAdjacentProjects(project.slug)
 
   return (
@@ -84,7 +88,7 @@ export function ProjectDetail({ project }: { project: Project }) {
       </motion.div>
 
       {/* Thumbnail */}
-      {project.thumbnail && (
+      {!showPlaceholder ? (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -92,7 +96,19 @@ export function ProjectDetail({ project }: { project: Project }) {
           className="relative aspect-video w-full rounded-2xl overflow-hidden bg-bg-secondary border border-border"
           style={{ boxShadow: "var(--glow)" }}
         >
-          <Image src={project.thumbnail} alt={project.title} fill className="object-cover" />
+          <Image src={project.thumbnail!} alt={project.title} fill className="object-cover" onError={() => setImgError(true)} />
+        </motion.div>
+      ) : (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="relative aspect-video w-full rounded-2xl overflow-hidden bg-bg-secondary border border-border flex items-center justify-center p-8 text-center"
+          style={{ boxShadow: "var(--glow)" }}
+        >
+          <span className="text-4xl md:text-6xl font-black text-border/60 font-mono leading-tight tracking-widest uppercase drop-shadow-sm select-none break-words">
+            {project.title}
+          </span>
         </motion.div>
       )}
 

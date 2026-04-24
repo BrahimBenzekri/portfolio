@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -13,14 +14,17 @@ type ProjectCardProps = {
 }
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
+  const [imgError, setImgError] = useState(false)
+  const showPlaceholder = !project.thumbnail || imgError
+
   const num = index !== undefined ? String(index + 1).padStart(2, "0") : null
 
   // Derive a short category label
   const categoryLabel = project.badge
     ? `${project.badge.split(" ")[0]} · Flutter`
     : project.status === "In Development"
-    ? "In Dev · Flutter"
-    : "Flutter"
+      ? "In Dev · Flutter"
+      : "Flutter"
 
   return (
     <motion.div
@@ -29,10 +33,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       style={{ boxShadow: "0 0 0 transparent" }}
       whileFocus={{ boxShadow: "var(--glow)" }}
       onMouseEnter={(e) => {
-        ;(e.currentTarget as HTMLDivElement).style.boxShadow = "var(--glow)"
+        ; (e.currentTarget as HTMLDivElement).style.boxShadow = "var(--glow)"
       }}
       onMouseLeave={(e) => {
-        ;(e.currentTarget as HTMLDivElement).style.boxShadow = "0 0 0 transparent"
+        ; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 0 0 transparent"
       }}
     >
       {/* Editorial number */}
@@ -44,17 +48,18 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
       {/* Thumbnail */}
       <Link href={`/projects/${project.slug}`} className="block relative aspect-video bg-bg-tertiary overflow-hidden">
-        {project.thumbnail ? (
+        {!showPlaceholder ? (
           <Image
-            src={project.thumbnail}
+            src={project.thumbnail!}
             alt={project.title}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
+            onError={() => setImgError(true)}
           />
         ) : (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-5xl font-black text-border/40 font-mono">
-              {project.title.slice(0, 2).toUpperCase()}
+          <div className="absolute inset-0 flex items-center justify-center p-6 text-center">
+            <span className="text-2xl font-black text-border/60 font-mono leading-tight tracking-wider uppercase drop-shadow-sm">
+              {project.title}
             </span>
           </div>
         )}

@@ -18,7 +18,7 @@ export type Project = {
   stack: string[]
   github: string | null
   demo: string | null
-  thumbnail: string
+  thumbnail: string | null
   features: string[]
   role: string
   challenges: {
