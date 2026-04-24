@@ -96,7 +96,7 @@ export function ProjectDetail({ project }: { project: Project }) {
           className="relative aspect-video w-full rounded-2xl overflow-hidden bg-bg-secondary border border-border"
           style={{ boxShadow: "var(--glow)" }}
         >
-          <Image src={project.thumbnail!} alt={project.title} fill className="object-cover" onError={() => setImgError(true)} />
+          <Image src={project.thumbnail!} alt={project.title} fill className="object-cover" priority onError={() => setImgError(true)} />
         </motion.div>
       ) : (
         <motion.div
